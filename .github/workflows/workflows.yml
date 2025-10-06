@@ -9,16 +9,22 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: "3.10"
+
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          pip install playwright
 
       - name: Install Playwright Browsers
-        uses: microsoft/playwright-github-action@v1
+        run: |
+          npx playwright install --with-deps
 
       - name: Run the script
         run: |
