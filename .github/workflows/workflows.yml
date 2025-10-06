@@ -24,8 +24,9 @@ jobs:
 
       - name: Install Playwright Browsers
         run: |
-          npx playwright install --with-deps
-
+          python -m playwright install chromium
+          python -m playwright install-deps
+          
       - name: Run the script
         run: |
           python alerte_bot.py
