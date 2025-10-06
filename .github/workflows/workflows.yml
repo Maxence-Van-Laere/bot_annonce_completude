@@ -1,4 +1,4 @@
-name: Run bot every 20 minutes
+name: Alert Completude Bot (every 20min)
 
 on:
   schedule:
@@ -16,6 +16,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        run: |
+          python -m playwright install --with-deps
+
       - name: Run the script
         run: |
           python alerte_bot.py
