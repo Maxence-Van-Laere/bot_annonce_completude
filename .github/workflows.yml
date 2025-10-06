@@ -18,4 +18,4 @@ jobs:
           pip install -r requirements.txt
       - name: Run the script
         run: |
-          python watch_ads.py
+          python alerte_bot.py
