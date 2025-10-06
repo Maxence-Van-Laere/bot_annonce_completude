@@ -2,7 +2,9 @@ name: Alert Completude Bot (every 20min)
 
 on:
   schedule:
-    - cron: "*/20 * * * *"
+    # +2h pour l'heure d'été (basé sur UTC), à adapter pour l'heure d'hiver (+1h)
+    - cron: "0,20,40 7-14 * * 1-5"
+    - cron: "0,10 15 * * 1-5"
   workflow_dispatch:
 
 jobs:
@@ -26,7 +28,7 @@ jobs:
         run: |
           python -m playwright install chromium
           python -m playwright install-deps
-          
+
       - name: Run the script
         run: |
           python alerte_bot.py
