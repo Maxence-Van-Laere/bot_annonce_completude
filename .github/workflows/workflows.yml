@@ -30,5 +30,13 @@ jobs:
           python -m playwright install-deps
 
       - name: Run the script
+        env:
+          VILLE_CIBLES: ${{ secrets.VILLE_CIBLES }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+          ADRESSE_PERSONNELLE: ${{ secrets.ADRESSE_PERSONNELLE }}
+          USER_ID: ${{ secrets.USER_ID }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
         run: |
           python alerte_bot.py
