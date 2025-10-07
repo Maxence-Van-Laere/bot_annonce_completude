@@ -3,9 +3,9 @@ from playwright.async_api import async_playwright
 import smtplib
 from email.mime.text import MIMEText
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 
 villes_str = os.environ.get("VILLE_CIBLES", "")
 VILLE_CIBLES = [v.strip() for v in villes_str.split(",") if v.strip()]
