@@ -3,11 +3,11 @@
 Bot python qui envoie une alerte mail lorsqu'une annonce de cours Complétude dans une des villes choisies est postée.
 
 **Fonctionnalités :**
-    - Laps de temps entre chaque exécution du script
+    - Laps de temps entre chaque exécution du script  
     - Choix des jours d'éxécution et de la plage horaire  
-    - Choix des villes à surveiller
-    - Envoie d'un mail d'alerte à un ou plusieurs destinataires
-    - Exécution du script via Github Actions grâce aux Github Secrets
+    - Choix des villes à surveiller  
+    - Envoie d'un mail d'alerte à un ou plusieurs destinataires  
+    - Exécution du script via Github Actions grâce aux Github Secrets  
 
     
 **Déployer en local :**
@@ -19,19 +19,19 @@ Bot python qui envoie une alerte mail lorsqu'une annonce de cours Complétude da
 
 
 Déployer via Github actions :
-    - Cloner le dépôt 
-    - Dans workflows.yml : modifiez la section schedule selon votre convenance (aide ci-dessous)
-    - Créer un nouveau repos sur Github, push le projet sur le repos distant (vérfier que le fichier "workflows.yml se trouve bien dans .github/workflows")
-    - Dans le dépôt, Settings > Secrets and variables > Actions, créer a "New Repository Secret" pour chacun des variables listées dans le workflows.yml (env) et y renseigner les valeurs (vous pouvez vous aider de l'index ci-dessous)
+    - Cloner le dépôt  
+    - Dans workflows.yml : modifiez la section schedule selon votre convenance (aide ci-dessous)  
+    - Créer un nouveau repos sur Github, push le projet sur le repos distant (vérfier que le fichier "workflows.yml se trouve bien dans .github/workflows")  
+    - Dans le dépôt, Settings > Secrets and variables > Actions, créer a "New Repository Secret" pour chacun des variables listées dans le workflows.yml (env) et y renseigner les valeurs (vous pouvez vous aider de l'index ci-dessous)  
 
 
 Guide schedule:
-![alt text](resources\shedule_alerte_completude.png)
-<span style="color:red">Rouge</span>: à quelles horaires (minutes) ? 
-<span style="color:blue">Bleu</span>: quelles plages horaires ?
-<span style="color:orange">Orange</span>: quels jours dans la semaine ?
-<span style="color:green">Vert</span>: quels mois ?
-<span style="color:pink">Rose</span>: quels jours de la semaine ?
+![alt text](resources\shedule_alerte_completude.png)  
+<span style="color:red">Rouge</span>: à quelles horaires (minutes) ?  
+<span style="color:blue">Bleu</span>: quelles plages horaires ?  
+<span style="color:orange">Orange</span>: quels jours dans la semaine ?  
+<span style="color:green">Vert</span>: quels mois ?  
+<span style="color:pink">Rose</span>: quels jours de la semaine ?  
 
 
 Variables d'environnements:
