@@ -2,7 +2,7 @@
 
 Bot python qui envoie une alerte mail lorsqu'une annonce de cours Complétude dans une des villes choisies est postée.
 
-**Fonctionnalités :**
+## Fonctionnalités :  
     - Laps de temps entre chaque exécution du script  
     - Choix des jours d'éxécution et de la plage horaire  
     - Choix des villes à surveiller  
@@ -10,7 +10,7 @@ Bot python qui envoie une alerte mail lorsqu'une annonce de cours Complétude da
     - Exécution du script via Github Actions grâce aux Github Secrets  
 
     
-**Déployer en local :**
+## Déployer en local :  
     - cloner le dépôt : git clone https://github.com/Maxence-Van-Laere/bot_annonce_completude.git
     - Installer les dépendances : pip install -r requirements.txt
     - Installer les navigateurs Playwright : playwright install
@@ -18,15 +18,16 @@ Bot python qui envoie une alerte mail lorsqu'une annonce de cours Complétude da
     - exécution du script : python alerte_bot.py 
 
 
-Déployer via Github actions :
+## Déployer via Github actions :  
     - Cloner le dépôt  
     - Dans workflows.yml : modifiez la section schedule selon votre convenance (aide ci-dessous)  
     - Créer un nouveau repos sur Github, push le projet sur le repos distant (vérfier que le fichier "workflows.yml se trouve bien dans .github/workflows")  
     - Dans le dépôt, Settings > Secrets and variables > Actions, créer a "New Repository Secret" pour chacun des variables listées dans le workflows.yml (env) et y renseigner les valeurs (vous pouvez vous aider de l'index ci-dessous)  
 
 
-Guide schedule:
-![alt text](resources\shedule_alerte_completude.png)  
+
+**Guide schedule:**  
+![alt text](resources/shedule_alerte_completude.png)  
 <span style="color:red">Rouge</span>: à quelles horaires (minutes) ?  
 <span style="color:blue">Bleu</span>: quelles plages horaires ?  
 <span style="color:orange">Orange</span>: quels jours dans la semaine ?  
@@ -34,7 +35,7 @@ Guide schedule:
 <span style="color:pink">Rose</span>: quels jours de la semaine ?  
 
 
-Variables d'environnements:
+**Variables d'environnements:**  
 - **VILLE_CIBLES** : Liste des villes à surveiller, séparées par des virgules
 - **EMAIL_SENDER** : Adresse e-mail utilisée pour envoyer les alertes
 - **EMAIL_PASSWORD** : Mot de passe ou mot de passe d'application associé à l’adresse EMAIL_SENDER.
