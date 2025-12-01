@@ -5,6 +5,8 @@ Bot python qui envoie une alerte mail lorsqu'une annonce de cours Complétude da
 **Fonctionnalités :**
     - Laps de temps entre chaque exécution du script
     - Choix des jours d'éxécution et de la plage horaire  
+    - Choix des villes à surveiller
+    - Envoie d'un mail d'alerte à un ou plusieurs destinataires
     - Exécution du script via Github Actions grâce aux Github Secrets
 
     
