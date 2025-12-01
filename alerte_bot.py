@@ -3,9 +3,9 @@ from playwright.async_api import async_playwright
 import smtplib
 from email.mime.text import MIMEText
 import os
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-#load_dotenv()
+load_dotenv()
 
 villes_str = os.environ.get("VILLE_CIBLES", "")
 VILLE_CIBLES = [v.strip() for v in villes_str.split(",") if v.strip()]
@@ -15,16 +15,14 @@ EMAIL_RECIPIENTS = [e.strip() for e in emails_str.split(",") if e.strip()]
 
 # Configuration
 URL = "https://professeur.completude.com/cap"
-#VILLE_CIBLES =  os.environ.get("VILLE_CIBLES")          #["NOISY LE ROI", "BAILLY", "ST NOM LA BRETECHE", "RENNEMOULIN"]  # Liste des villes à surveiller
-EMAIL_SENDER = os.environ.get("EMAIL_SENDER")            #"maxencevanlaere@gmail.com"
-EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")            #"ikjs fred fhco xkhm"
-#EMAIL_RECIPIENTS = os.environ.get("EMAIL_RECIPIENTS")            #["maxencevanlaere@gmail.com"]  # Liste des destinataires
-ADRESSE_PERSONNELLE = os.environ.get("ADRESSE_PERSONNELLE")  #"46 RÉSIDENCE LES VAUX CHÉRON, 78870 BAILLY, FRANCE"  
+EMAIL_SENDER = os.environ.get("EMAIL_SENDER")            
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")           
+ADRESSE_PERSONNELLE = os.environ.get("ADRESSE_PERSONNELLE")    
 
 # Identifiants du portail
 PORTAIL_URL = "https://professeur.completude.com/cap"
-USER_ID = os.environ.get("USER_ID")            #"m.vanlaere"
-USER_PASSWORD = os.environ.get("USER_PASSWORD")            #"Maxencevl26@"
+USER_ID = os.environ.get("USER_ID")           
+USER_PASSWORD = os.environ.get("USER_PASSWORD")            
 
 
 

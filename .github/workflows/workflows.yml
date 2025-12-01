@@ -3,8 +3,7 @@ name: Alert Completude Bot (every 20min)
 on:
   schedule:
     # +2h pour l'heure d'été (basé sur UTC), à adapter pour l'heure d'hiver (+1h)
-    - cron: "0,20,40 7-14 * * 1-5"
-    - cron: "0,10 15 * * 1-5"
+    - cron: "0,20,40 7-15 * * 1-5"
   workflow_dispatch:
 
 jobs:
