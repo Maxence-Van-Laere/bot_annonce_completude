@@ -27,7 +27,7 @@ jobs:
         run: |
           python -m playwright install chromium
           python -m playwright install-deps
-
+      
       - name: Run the script
         env:
           VILLE_CIBLES: ${{ secrets.VILLE_CIBLES }}
